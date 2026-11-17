@@ -1,0 +1,16 @@
+:root {
+  color-scheme: light;
+  --color-paper: #f8f5ed;
+  --color-paper-deep: #f0eadc;
+  --color-ink: #25352d;
+  --color-ink-soft: #667068;
+  --color-green: #315842;
+  --color-green-dark: #233f30;
+  --color-orange: #e77e4c;
+  --color-pink: #f3d9d3;
+  --color-yellow: #f1e8bf;
+  --color-blue: #dce8e7;
+  --font-body: "DM Sans", sans-serif;
+  --font-display: "Playfair Display", Georgia, serif;
+  --page-gutter: clamp(1.25rem, 6vw, 6.25rem);
+}
