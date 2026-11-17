@@ -1,10 +1,12 @@
 .site-header {
   position: relative;
   z-index: 1;
-  display: flex;
+  display: grid;
   min-height: 88px;
+  grid-template-areas: "brand nav contact";
+  grid-template-columns: auto minmax(0, 1fr) auto;
   align-items: center;
-  justify-content: space-between;
+  column-gap: clamp(1.25rem, 3vw, 3rem);
   padding: 0 var(--page-gutter);
 }
 
@@ -12,6 +14,7 @@
   position: relative;
   display: inline-flex;
   align-items: baseline;
+  grid-area: brand;
   color: var(--color-green-dark);
   font-family: var(--font-display);
   font-size: 1.65rem;
@@ -20,7 +23,15 @@
   white-space: nowrap;
 }
 
-.wordmark > span:first-child {
+.brand-logo-mark {
+  align-self: center;
+  margin-right: 0.45rem;
+  color: var(--color-orange);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+}
+
+.brand-logo-name > span {
   margin: 0 0.18em;
   color: var(--color-orange);
   font-family: var(--font-body);
@@ -28,20 +39,14 @@
   font-weight: 500;
 }
 
-.wordmark-sparkle {
-  position: absolute;
-  top: -0.45em;
-  right: -1.05em;
-  color: var(--color-orange);
-  font-family: var(--font-body);
-  font-size: 0.65rem;
-}
-
 .site-nav {
   display: flex;
-  gap: clamp(1.5rem, 4vw, 3.5rem);
+  grid-area: nav;
+  justify-content: center;
+  gap: clamp(0.7rem, 1.5vw, 1.4rem);
   color: var(--color-ink-soft);
-  font-size: 0.8rem;
+  font-size: 0.73rem;
+  white-space: nowrap;
 }
 
 .site-nav a,
@@ -56,14 +61,21 @@
   color: var(--color-orange);
 }
 
+.site-nav a.is-active {
+  color: var(--color-green-dark);
+  font-weight: 700;
+}
+
 .header-link,
 .text-link {
   display: inline-flex;
   align-items: center;
+  grid-area: contact;
   gap: 0.6rem;
   color: var(--color-green);
   font-size: 0.8rem;
   font-weight: 700;
+  white-space: nowrap;
 }
 
 .arrow-icon {
@@ -353,7 +365,7 @@ a:hover .arrow-icon {
   padding-top: 1rem;
 }
 
-.flavor-details h3 {
+.flavor-details h2 {
   margin: 0 0 0.35rem;
   color: var(--color-green-dark);
   font-family: var(--font-display);
@@ -481,11 +493,26 @@ a:hover .arrow-icon {
 
 @media (max-width: 800px) {
   .site-header {
-    min-height: 76px;
+    min-height: 0;
+    grid-template-areas:
+      "brand contact"
+      "nav nav";
+    grid-template-columns: 1fr auto;
+    row-gap: 0.9rem;
+    padding-top: 1rem;
+    padding-bottom: 0.8rem;
   }
 
   .site-nav {
-    gap: 1.25rem;
+    justify-content: space-between;
+    gap: 0.7rem;
+    overflow-x: auto;
+    padding-bottom: 0.35rem;
+    scrollbar-width: none;
+  }
+
+  .site-nav::-webkit-scrollbar {
+    display: none;
   }
 
   .hero {
@@ -513,7 +540,8 @@ a:hover .arrow-icon {
 
 @media (max-width: 600px) {
   .site-header {
-    min-height: 72px;
+    column-gap: 0.75rem;
+    row-gap: 0.75rem;
   }
 
   .wordmark {
@@ -521,12 +549,19 @@ a:hover .arrow-icon {
   }
 
   .site-nav {
-    display: none;
+    justify-content: flex-start;
+    margin-right: calc(-1 * var(--page-gutter));
+    padding-right: var(--page-gutter);
+    font-size: 0.7rem;
   }
 
   .header-link {
     gap: 0.3rem;
     font-size: 0.7rem;
+  }
+
+  .header-link .arrow-icon {
+    display: none;
   }
 
   .hero {
@@ -591,7 +626,7 @@ a:hover .arrow-icon {
     aspect-ratio: 1.2 / 1;
   }
 
-  .flavor-details h3 {
+  .flavor-details h2 {
     font-size: 1.3rem;
   }
 
