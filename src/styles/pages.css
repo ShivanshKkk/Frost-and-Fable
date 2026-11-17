@@ -502,17 +502,6 @@
   padding-bottom: 6rem;
 }
 
-.review-disclaimer {
-  max-width: 900px;
-  margin: -2rem auto 2rem;
-  border-left: 3px solid var(--color-orange);
-  padding: 0.75rem 1rem;
-  background: var(--color-paper-deep);
-  color: var(--color-ink-soft);
-  font-size: 0.76rem;
-  line-height: 1.6;
-}
-
 .review-grid {
   display: grid;
   max-width: 1100px;
@@ -711,7 +700,4 @@
     padding-bottom: 4rem;
   }
 
-  .review-disclaimer {
-    margin-top: -1rem;
-  }
 }

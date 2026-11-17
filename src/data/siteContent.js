@@ -7,8 +7,8 @@ export const flavors = [
     variants: ["Standard vanilla", "French vanilla"],
     description: "A familiar favorite, with two lovely takes on vanilla.",
     image:
-      "https://images.unsplash.com/photo-1570197788417-0e82375c9371?auto=format&fit=crop&w=1000&q=85",
-    imageAlt: "Several pale scoops of ice cream in a bowl",
+      "https://images.unsplash.com/photo-1560008581-09826d1de69e?auto=format&fit=crop&w=1000&q=85",
+    imageAlt: "Vanilla ice cream with sprinkles",
     color: "vanilla",
   },
   {
@@ -25,8 +25,8 @@ export const flavors = [
     variants: ["Strawberry"],
     description: "A bright, berry-led scoop for sunny afternoons.",
     image:
-      "https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?auto=format&fit=crop&w=1000&q=85",
-    imageAlt: "A pink scoop of ice cream in a cone",
+      "https://images.unsplash.com/photo-1633933358116-a27b902fad35?auto=format&fit=crop&w=1000&q=85",
+    imageAlt: "Strawberry ice cream cones with fresh strawberries",
     color: "strawberry",
   },
   {
@@ -43,8 +43,8 @@ export const flavors = [
     variants: ["Coffee", "Espresso"],
     description: "A smooth coffee note, from gentle to extra bold.",
     image:
-      "https://images.unsplash.com/photo-1567206563064-6f60f40a2b57?auto=format&fit=crop&w=1000&q=85",
-    imageAlt: "A display of ice cream flavors",
+      "https://images.unsplash.com/photo-1529972016098-9407f216972e?auto=format&fit=crop&w=1000&q=85",
+    imageAlt: "A mocha ice cream cone",
     color: "coffee",
   },
   {
@@ -52,8 +52,8 @@ export const flavors = [
     variants: ["Caramel"],
     description: "A mellow, buttery sweetness in every spoonful.",
     image:
-      "https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?auto=format&fit=crop&w=1000&q=85",
-    imageAlt: "An ice cream cone topped with creamy scoops",
+      "https://images.unsplash.com/photo-1787788629294-087ae8a9b730?auto=format&fit=crop&w=1000&q=85",
+    imageAlt: "Caramel-colored ice cream in a waffle cone",
     color: "caramel",
   },
 ];

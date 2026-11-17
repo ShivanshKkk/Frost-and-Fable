@@ -10,9 +10,6 @@ export default function ReviewsPage() {
         title={<>The scoop <em>notes.</em></>}
         description="A few sample review drafts for the page layout. These are not verified customer testimonials."
       />
-      <p className="review-disclaimer" role="note">
-        Sample copy — replace with real, approved customer feedback before publishing these as reviews.
-      </p>
       <div className="review-grid">
         {reviews.map((review) => (
           <article className="review-card" key={review.name}>
